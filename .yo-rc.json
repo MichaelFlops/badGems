@@ -1,0 +1,8 @@
+{
+  "generator-react-webpack": {
+    "appName": "badGems",
+    "style": "scss",
+    "postcss": true,
+    "generatedWithVersion": 3
+  }
+}

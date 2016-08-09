@@ -5,29 +5,17 @@ var $ = require('jquery');
 // using an ES6 transpiler, like babel
 import { Router, Route, Link } from 'react-router'
 
-
+import NavBar from 'components/NavBar'
 import React from 'react';
 
-const App = React.createClass({
+var App = React.createClass({
   render: function() {
     return (
       <IssueFeed>
-      <NavBar />
       </IssueFeed>
     );
   }
-  }
 });
-
-class NavBar extends React.Component {
-  render() {
-    return (
-      <div className="navBar">
-        <h3>All the broken Rubys</h3>
-      </div>
-    );
-  }
-}
 
 var IssueFeed = React.createClass({
     cutBody: function(str){
@@ -62,6 +50,7 @@ var IssueFeed = React.createClass({
   render: function() {
     return (
       <div>
+        <NavBar />
         {this.state.issuesArray.map(function(issue) {
           return (
               <IssueItem key={issue.id} data={issue} />
@@ -69,14 +58,6 @@ var IssueFeed = React.createClass({
         })}
       </div>
     );
-  }
-});
-
-var IssueDetail = React.createClass({
-  render: function(){
-    return (
-      <div> TEST </div>
-    )
   }
 });
 
@@ -92,7 +73,6 @@ class IssueItem extends React.Component {
               </div>
               <div className="middle-comments">
                 <i className="fa fa-comment-o" aria-hidden="true"></i>
-                {this.props.data.comments}
               </div>
               <div className="middle-title">{this.props.data.title}</div>
               <div className="middle-body">

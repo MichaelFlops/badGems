@@ -5,7 +5,7 @@ The Broken Rubys, a Github issue viewer using React.js
 - [Learn more about React here](http://facebook.github.io/react)
 
 A work in progress, but checkout the cute css-drawn rubys in the mean time:
-- [Live example](http://badgems.paperplane.io/)
+- [See what it looks like on CodePen](https://codepen.io/michaelflops/full/grBAAZ/) *note this isn't being updated, I started in codepen and switched when I started building routes using react-router. now working from this github repo... but play around
 
 ## Setup on your local machine
 

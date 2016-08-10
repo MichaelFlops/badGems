@@ -10,6 +10,7 @@ export default React.createClass({
       <div>
         <NavBar />
           <h1>Issue Detailssssss</h1>
+          <h5>React router works! :D</h5>
       </div>
     )
   }

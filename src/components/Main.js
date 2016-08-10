@@ -18,8 +18,9 @@ var App = React.createClass({
 });
 
 var IssueFeed = React.createClass({
+  // temp function for cutting the body text, still figuring out where to place this.
     cutBody: function(str){
-      return str.replace(/^(.{11}[^\s]*).*/, "$1");
+      return str.replace(/^(.{11}[^\s]*).*/, '$1');
     },
     getInitialState: function() {
       return {
@@ -40,7 +41,7 @@ var IssueFeed = React.createClass({
        _this.setState({
          issuesArray: data
        });
-       console.log("THIS: ", _this.state.issuesArray);
+       console.log('THIS: ', _this.state.issuesArray);
       })
    },
   componentWillUnmount: function() {
@@ -72,10 +73,12 @@ class IssueItem extends React.Component {
                 #{this.props.data.number}
               </div>
               <div className="middle-comments">
+                {this.props.data.comments}
                 <i className="fa fa-comment-o" aria-hidden="true"></i>
               </div>
               <div className="middle-title">{this.props.data.title}</div>
               <div className="middle-body">
+                {/* a function expression seems really sill to do right here, but it's a quick fix to keep going */}
                 {(() => {
                   var str = this.props.data.body.substring(0,140) + '...'; return str;
                 })()}
